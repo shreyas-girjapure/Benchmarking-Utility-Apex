@@ -20,9 +20,9 @@ export default class BenchmarkingCodeEditor extends LightningElement {
   }
   excecuteApexCode() {
     this.finalApexString = this.referenceEditorValue + this.targetEditorValue;
-
     if (this.finalApexString) {
-      console.log("in final string check");
+      this.finalApexString = stripHtmlFromRichInnerText(this.finalApexString);
+      console.log("in final string check " + this.finalApexString);
     }
   }
 }
