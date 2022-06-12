@@ -19,5 +19,11 @@
         <members>Benchmarking_Utility_Salesforce_UtilityBar</members>
         <name>FlexiPage</name>
     </types>
+    <types>
+        <members>benchmarkingCodeEditor</members>
+        <members>errorPanel</members>
+        <members>showBenchmarkResult</members>
+        <name>LightningComponentBundle</name>
+    </types>
     <version>53.0</version>
 </Package>
