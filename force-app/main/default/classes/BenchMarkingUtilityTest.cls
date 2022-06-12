@@ -17,6 +17,7 @@ static void calulateResultsTest(){
     }
     BenchMarkingUtility.markTargetEnd();
     BenchmarkResponseWrapper result = BenchMarkingUtility.calculateResults(200);
+    BenchMarkingUtility.reportResults(200);
     System.assert(result != null,'Not empty Result');
     Test.stopTest();
 }
