@@ -1,0 +1,35 @@
+<template>
+  <lightning-card title="Benchmarking Editor" icon-name="custom:custom67">
+    <div id="referenceEditor">
+      <!-- <h3>Reference Editor</h3> -->
+      <lightning-input-rich-text
+        label="Reference Editor"
+        label-visible
+        formats={allowedFormats}
+        onchange={handleReferenceEditorChange}
+      >
+      </lightning-input-rich-text>
+    </div>
+    <div id="targetEditor">
+      <!-- <h3>Target Editor</h3> -->
+      <lightning-input-rich-text
+        label="Target Editor"
+        label-visible
+        formats={allowedFormats}
+        onchange={handleTargetEditorChange}
+      >
+      </lightning-input-rich-text>
+    </div>
+
+    <template if:true={error}>
+      <c-error-panel errors={error}></c-error-panel>
+    </template>
+    <lightning-button
+      variant="brand"
+      label="Execute"
+      title="Execute Apex code"
+      onclick={excecuteApexCode}
+      class="slds-m-left_x-small"
+    ></lightning-button>
+  </lightning-card>
+</template>
