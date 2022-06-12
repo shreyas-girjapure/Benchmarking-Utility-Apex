@@ -23,7 +23,7 @@ public class BenchMarkingUtility {
     public static void markTargetEnd(){
         targetEndTime = Limits.getCpuTime();
     }
-
+    @AuraEnabled
     public static BenchmarkResponseWrapper calculateResults(Integer loops){
         BenchmarkResponseWrapper result = new BenchmarkResponseWrapper();
         Integer refDuration = referenceEndTime - referenceStartTime;
@@ -41,6 +41,7 @@ public class BenchMarkingUtility {
         result.millisecondsPerOperation = eachItem;
         return result;
     }
+    @AuraEnabled
     public static void reportResults(Integer loops){
         BenchmarkResponseWrapper result = calculateResults(loops);
         System.debug(LoggingLevel.ERROR, result);
